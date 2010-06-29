@@ -30,8 +30,14 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
+  # You can have the root of your site routed with map.root -- just remember to delete public/index.html. Modified by Anjan
+  map.root :controller => "pages", :action => 'home'
+
+  #routes introduced by Anjan
+  map.contact '/contact', :controller => 'pages', :action => 'contact'
+  map.about   '/about',   :controller => 'pages', :action => 'about' 
+  map.help    '/help',    :controller => 'pages', :action => 'help'
+  #end of routes introduced by Anjan
 
   # See how all your routes lay out with "rake routes"
 
